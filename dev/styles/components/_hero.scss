@@ -1,0 +1,233 @@
+@mixin shape {
+  content: '';
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  border-radius: 30px;
+  box-shadow: 0 0 0 12px $light2Color;
+  clip-path: polygon(50% 50%, 100% 50%, 100% 100%, 50% 100%);
+
+  @media (max-width: 600px) {
+    width: 30px;
+    height: 30px;
+    border-radius: 15px;
+  }
+}
+
+.hero {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  aspect-ratio: 1664 / 778;
+  padding: 24px 48px;
+  border-radius: 30px;
+
+  @media (max-width: 1200px) {
+    aspect-ratio: unset;
+    padding: 0;
+    border-radius: 30px 30px 0 0;
+  }
+
+  &-media {
+    @media (max-width: 1200px) {
+      position: relative;
+    }
+
+    &:not(:last-child) {
+      @media (max-width: 1200px) {
+        margin-bottom: 16px;
+      }
+    }
+
+    &-bar {
+      @media (max-width: 1200px) {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 40%;
+        height: 60px;
+        border-top-left-radius: 30px;
+        background-color: $light2Color;
+      }
+
+      @media (max-width: 600px) {
+        height: 40px;
+      }
+
+      &::before {
+        @media (max-width: 1200px) {
+          bottom: 0;
+          right: 100%;
+          @include shape;
+        }
+      }
+
+      &::after {
+        @media (max-width: 1200px) {
+          bottom: 100%;
+          right: 0;
+          @include shape;
+        }
+      }
+    }
+  }
+
+  &-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    border-radius: 30px;
+    object-fit: cover;
+    object-position: center;
+
+    @media (max-width: 1200px) {
+      position: unset;
+      width: auto;
+      height: auto;
+    }
+  }
+
+  &-controls {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: 24px;
+    width: 60%;
+
+    @media (max-width: 1200px) {
+      width: 100%;
+    }
+
+    @media (max-width: 768px) {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    &:not(:last-child) {
+      @media (max-width: 1200px) {
+        margin-bottom: 16px;
+      }
+    }
+
+    .button-primary {
+      @media (max-width: 1200px) {
+        width: calc(50% - 12px);
+      }
+
+      @media (max-width: 768px) {
+        width: 100%;
+      }
+    }
+
+    .button-secondary {
+      @media (max-width: 1200px) {
+        width: calc(50% - 12px);
+        border-color: $primaryColor;
+        color: $dark1Color;
+      }
+
+      @media (max-width: 768px) {
+        width: 100%;
+      }
+    }
+  }
+
+  &-item {
+    width: 60%;
+    
+    &:not(.hero-item-extra) {
+      @media (max-width: 1200px) {
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        width: 100%;
+        aspect-ratio: 1664 / 778;
+        padding: 0 16px 60px;
+      }
+    }
+
+    &-extra {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      width: 40%;
+      padding: 20px;
+      border-top-left-radius: 30px;
+      background-color: $light2Color;
+
+      @media (max-width: 1200px) {
+        position: unset;
+        width: 100%;
+        padding: unset;
+        border-top-left-radius: unset;
+        background-color: unset;
+      }
+
+      &::before {
+        bottom: 0;
+        right: 100%;
+        @include shape;
+      }
+
+      &::after {
+        bottom: 100%;
+        right: 0;
+        @include shape;
+      }
+    } 
+  }
+
+  &-title {
+    font-weight: 400;
+    font-size: calc(128 / 1920 * 100vw);
+    line-height: 1.2;
+    color: $lightColor;
+    text-transform: uppercase;
+    text-shadow: 0 0 10px $darkColor025;
+
+    @media (max-width: 1600px) {
+      font-size: calc(96 / 1920 * 100vw);
+    }
+
+    @media (max-width: 768px) {
+      font-size: 32px;
+    }
+  }
+
+  &-subtitle {
+    font-weight: 400;
+    font-size: calc(64 / 1920 * 100vw);
+    line-height: 1.2;
+    color: $lightColor;
+    text-transform: uppercase;
+    text-shadow: 0 0 10px $darkColor025;
+
+    @media (max-width: 1600px) {
+      font-size: calc(48 / 1920 * 100vw);
+    }
+
+    @media (max-width: 768px) {
+      font-size: 20px;
+    }
+  }
+
+  &-text {
+    font-weight: 400;
+    font-size: calc(28 / 1920 * 100vw);
+    line-height: 1.42;
+    color: $dark4Color;
+    text-transform: uppercase;
+
+    @media (max-width: 1600px) {
+      font-size: 20px;
+    }
+  }
+}

@@ -1,0 +1,22 @@
+.list-media {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+
+  &-item {
+    &:not(:last-child) {
+      margin-right: 24px;
+    }
+  }
+
+  &-link {
+    display: block;
+    width: auto;
+    height: 24px;
+  }
+
+  &-icon {
+    width: auto;
+    height: 24px;
+  }
+}

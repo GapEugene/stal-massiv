@@ -1,5 +1,19 @@
+@import './common/fonts';
 @import './common/variables';
 @import './common/reset';
 @import './common/base';
+
+@import './utils/container';
+
+@import './components/header';
+@import './components/menu';
+@import './components/logotype';
+@import './components/list-media';
+@import './components/section';
+@import './components/hero';
+@import './components/examples';
+@import './components/products';
+@import './components/buttons/button-primary';
+@import './components/buttons/button-secondary';
 
 @import './common/extra';

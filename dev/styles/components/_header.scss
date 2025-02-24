@@ -1,0 +1,155 @@
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  padding-block: 24px;
+  background-color: $lightColor;
+  box-shadow: 0 0 10px 0 $darkColor025;
+
+  &-content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  &-item {
+    &:not(:last-child) {
+      margin-right: 64px;
+
+      @media (max-width: 1720px) {
+        margin-right: 48px;
+      }
+      
+      @media (max-width: 1600px) {
+        margin-right: 32px;
+      }
+    }
+
+    &-navigation {
+      @media (max-width: 1500px) {
+        display: none;
+      }
+    }
+
+    &-tabs {
+      margin-left: auto;
+
+      @media (max-width: 990px) {
+        display: none;
+      }
+    }
+
+    &-extra {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      row-gap: 12px;
+
+      @media (max-width: 990px) {
+        display: none;
+      }
+
+      &:not(:last-child) {
+        @media (min-width: 1501px) {
+          margin-right: 0;
+        }
+      }
+    }
+
+    &-menu-trigger {
+      display: none;
+
+      @media (max-width: 1500px) {
+        display: block;
+      }
+
+      @media (max-width: 990px) {
+        margin-left: auto;
+      }
+    }
+  }
+
+  &-navigation {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+  
+    &-item {
+      &:not(:last-child) {
+        margin-right: 80px;
+  
+        @media (max-width: 1720px) {
+          margin-right: 48px;
+        }
+  
+        @media (max-width: 1600px) {
+          margin-right: 32px;
+        }
+      }
+    }
+  
+    &-link {
+      position: relative;
+      font-weight: 400;
+      font-size: 24px;
+      line-height: 1.2;
+      color: $dark1Color;
+  
+      &:hover {
+        &::before {
+          width: 100%;
+        }
+      }
+  
+      &::before {
+        content: '';
+        position: absolute;
+        left: 50%;
+        top: 100%;
+        transform: translateX(-50%);
+        width: 0;
+        height: 1px;
+        background-color: $primaryColor;
+        transition: 0.2s ease-in-out;
+      }
+    }
+  }
+
+  &-link {
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 1.2;
+    color: $dark1Color;
+    transition: 0.15s ease-in-out;
+
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
+
+  &-button {
+    display: block;
+    width: 100%;
+    padding: 8px;
+    border: 1px solid $primaryColor;
+    border-radius: 10px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.2;
+    color: $dark1Color;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  &-button-menu {
+    display: block;
+    width: 48px;
+    height: 48px;
+
+    &-icon {
+      width: 100%;
+      height: 100%;
+      fill: $primaryColor;
+    }
+  }
+}

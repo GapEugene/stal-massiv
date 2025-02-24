@@ -1,0 +1,142 @@
+.products {
+  &-item {
+
+  }
+
+  &-media {
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+  }
+
+  &-image {
+    width: 100%;
+    aspect-ratio: 400 / 550;
+  }
+
+  &-info {
+    position: relative;
+    padding: 8px 80px 8px 8px;
+    background-color: $lightColor;
+    box-shadow: 0 0 10px 0 $darkColor025;
+    border-radius: 0 64px 64px 0;
+
+    @media (max-width: 768px) {
+      margin-bottom: 30px;
+      padding: 8px;
+      border-radius: 0;
+    }
+  }
+
+  &-title {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.2;
+    color: $dark4Color;
+  }
+
+  &-price {
+    &-current {
+      font-weight: 700;
+      font-size: 24px;
+      line-height: 1.2;
+      color: $dark4Color;
+
+      &:not(:last-child) {
+        margin-right: 24px;
+      }
+    }
+
+    &-old {
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 1.2;
+      color: $dark4Color022;
+      text-decoration: line-through;
+    }
+  }
+
+  &-button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
+    background-color: $dark4Color;
+    box-shadow: inset 0 0 0 5px $dark5Color;
+
+    @media (max-width: 768px) {
+      top: calc(100% + 4px);
+      right: unset;
+      left: 0;
+      width: 100%;
+      height: 24px;
+      border-radius: 30px;
+      box-shadow: inset 0 0 0 1px $dark5Color,
+                  0 0 10px 0 $darkColor025;
+    }
+
+    &-text {
+      display: none;
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 0.833;
+      color: $lightColor;
+
+      @media (max-width: 768px) {
+        display: block;
+      }
+
+      &:not(:last-child) {
+        @media (max-width: 768px) {
+          margin-right: 8px;
+        }
+      }
+    }
+
+    &-image {
+      width: 36px;
+      height: 36px;
+      margin: auto;
+
+      @media (max-width: 768px) {
+        width: 14px;
+        height: 14px;
+        margin: unset;
+      }
+    }
+  }
+}
+
+.products-slider {
+  overflow: visible !important;
+
+  .swiper-button-prev,
+  .swiper-button-next {
+    top: unset;
+    right: 0;
+    bottom: calc(100% + 16px);
+
+    &::after {
+      display: none;
+    }
+
+    img {
+      width: 34px;
+      height: 34px;
+    }
+  }
+
+  .swiper-button-prev {
+    left: unset;
+    right: calc(54px);
+  }
+
+  .swiper-button-next {
+
+  }
+}

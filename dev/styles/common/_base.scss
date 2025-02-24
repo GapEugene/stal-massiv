@@ -1,0 +1,17 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: $primaryFont;
+  background-color: $light2Color;
+}
+
+input {
+  font-family: $primaryFont;
+}
+
+img, svg {
+  display: block;
+  max-width: 100%;
+}

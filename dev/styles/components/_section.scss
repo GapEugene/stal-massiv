@@ -1,0 +1,31 @@
+.section {
+  &:not(:last-child) {
+    margin-bottom: 100px;
+  }
+
+  &-content {
+
+  }
+
+  &-head {
+    &:not(:last-child) {
+      margin-bottom: 48px;
+    }
+  }
+
+  &-title {
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 1.2;
+    color: $dark4Color;
+    text-transform: uppercase;
+  }
+
+  &-body {
+
+  }
+
+  &:has(.swiper) {
+    overflow: hidden;
+  }
+}

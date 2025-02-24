@@ -1,0 +1,44 @@
+.button-primary {
+  position: relative;
+  display: inline-block;
+  padding: 20px 48px;
+  border: 1px solid $primaryColor;
+  background-color: $primaryColor;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 1.66;
+  color: $dark1Color;
+  text-align: center;
+  overflow: hidden;
+
+  @media (max-width: 1200px) {
+    padding: 16px 24px;
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -30px;
+    transform: skewX(-10deg);
+    width: 20px;
+    height: 100%;
+    box-shadow: 0 0 30px 30px $lightColor025;
+    background-color: $lightColor025;
+    animation: shine 2s infinite;
+  }
+}
+
+@keyframes shine {
+  0% {
+    left: -30px;
+  }
+
+  50% {
+    left: calc(100% + 100px);
+  }
+
+  100% {
+    left: calc(100% + 100px);
+  }
+}

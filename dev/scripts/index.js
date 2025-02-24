@@ -1,3 +1,4 @@
 document.addEventListener('DOMContentLoaded', () => {
-  console.log('Hello, world!');
+  //= include './menu-trigger.js'
+  //= include './slider.js'
 });
