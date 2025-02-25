@@ -1,0 +1,43 @@
+.footer-media {
+  &-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+
+    @media (max-width: 768px) {
+      gap: 8px;
+    }
+
+    &-center {
+      justify-content: center;
+    }
+  }
+
+  &-item {
+    
+  }
+
+  &-link {
+    display: block;
+  }
+
+  &-icon {
+    width: 32px;
+    height: 32px;
+    box-shadow: 0 0 4px 0 $darkColor025;
+    border-radius: 8px;
+
+    &-circle {
+      border-radius: 50%;
+    }
+  }
+
+  &-image {
+    width: auto;
+    height: 40px;
+
+    @media (max-width: 768px) {
+      height: 20px;
+    }
+  }
+}

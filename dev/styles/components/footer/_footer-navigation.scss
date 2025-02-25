@@ -1,0 +1,40 @@
+.footer-navigation {
+  &-list {
+
+  }
+
+  &-item {
+    &:not(:last-child) {
+      margin-bottom: 16px;
+
+      @media (max-width: 768px) {
+        margin-bottom: 8px;
+      }
+    }
+  }
+
+  &-link {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.2;
+    color: $dark3Color;
+
+    @media (max-width: 768px) {
+      font-size: 14px;
+    }
+  }
+
+  &-mobile-hidden {
+    @media (max-width: 768px) {
+      display: none;
+    }
+  }
+
+  &-mobile-visible {
+    display: none;
+
+    @media (max-width: 768px) {
+      display: block;
+    }
+  }
+}
