@@ -1,0 +1,116 @@
+.product {
+  &-media {
+    position: relative;
+    aspect-ratio: 8 / 11;
+
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+
+    &-icon {
+      position: absolute;
+      top: 24px;
+      right: 24px;
+      width: 64px;
+      height: 64px;
+      padding: 16px;
+      border-radius: 32px;
+      box-shadow: 0 0 4px 0 $darkColor025;
+      background-color: rgba($color: #f00, $alpha: 0.5);
+      background-image: linear-gradient(rgba(0, 50, 0, 1), rgba(0, 0, 50, 1));
+      backdrop-filter: blur(60px);
+      fill: $lightColor;
+    }
+  }
+
+  &-image {
+    width: 100%;
+    height: 100%;
+  }
+
+  &-info {
+    position: relative;
+    height: 76px;
+    padding: 4px 46px 4px 8px;
+    border-radius: 0 38px 38px 0;
+    box-shadow: 0 0 10px 0 $darkColor025;
+    background-color: $lightColor;
+  }
+
+  &-title {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.2;
+    color: $dark3Color;
+  }
+
+  &-price {
+    display: flex;
+    align-items: flex-end;
+    column-gap: 24px;
+
+    &-current {
+      font-weight: 700;
+      font-size: 24px;
+      line-height: 1.2;
+      color: $dark3Color;
+    }
+
+    &-old {
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 1.2;
+      color: $dark3Color02;
+      text-decoration: line-through;
+    }
+  }
+
+  &-button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 76px;
+    height: 76px;
+    border: 5px solid $light3Color;
+    border-radius: 38px;
+    background-color: $dark3Color;
+    cursor: pointer;
+    overflow: hidden;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100px;
+      transform: skewX(-45deg);
+      width: 20px;
+      height: 100%;
+      box-shadow: 0 0 20px 20px $lightColor01;
+      background-color: $lightColor01;
+      animation: productButtonShine 4s ease-in-out infinite;
+    }
+    
+    &-icon {
+      width: 36px;
+      height: 36px;
+      fill: $lightColor;
+    }
+  }
+}
+
+@keyframes productButtonShine {
+  0% {
+    left: -100px;
+  }
+
+  50% {
+    left: calc(100% + 100px);
+  }
+
+  100% {
+    left: calc(100% + 100px);
+  }
+}

@@ -3,8 +3,15 @@
 @import './common/reset';
 @import './common/base';
 
+@import './components/wrapper';
 @import './components/container';
+@import './components/breadcrumbs';
+@import './components/catalog-header';
+@import './components/pagination';
+
 @import './components/header/index';
 @import './components/footer/index';
+@import './components/button/index';
+@import './components/products/index';
 
 @import './common/extra';
