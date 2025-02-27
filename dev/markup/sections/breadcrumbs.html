@@ -1,0 +1,20 @@
+<section class="breadcrumbs">
+  <div class="container">
+    <div class="breadcrumbs-content">
+      <ul class="breadcrumbs-list">
+        <li class="breadcrumbs-list-item">
+          <a class="breadcrumbs-list-link" href="#">
+            <svg class="breadcrumbs-list-icon">
+              <use xlink:href="./assets/icons/symbol/sprite.svg#house"></use>
+            </svg>
+          </a>
+        </li>
+        @@for (var i = 0; i < breadcrumbs.length; i++) {
+          <li class="breadcrumbs-list-item">
+            <span class="breadcrumbs-list-text">` + breadcrumbs[i] + `</span>
+          </li>
+        }
+      </ul>
+    </div>
+  </div>
+</section>

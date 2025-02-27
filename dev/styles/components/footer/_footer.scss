@@ -1,6 +1,6 @@
 .footer {
   padding-block: 40px;
-  background-color: $lightColor;
+  background-color: $grayscale100Color;
 
   @media (max-width: 768px) {
     padding-block: 20px;
@@ -173,7 +173,7 @@
         right: 0;
       }
 
-      .footer-media-list {
+      .block-media-list {
         @media (max-width: 768px) {
           flex-direction: column;
         }
@@ -217,7 +217,7 @@
     font-weight: 700;
     font-size: 24px;
     line-height: 1.2;
-    color: $dark3Color;
+    color: $grayscale17Color;
 
     @media (max-width: 768px) {
       font-size: 16px;
@@ -236,7 +236,7 @@
     font-weight: 700;
     font-size: 16px;
     line-height: 1.2;
-    color: $dark3Color;
+    color: $grayscale17Color;
 
     &:not(:last-child) {
       margin-bottom: 16px;
@@ -251,7 +251,7 @@
     font-weight: 400;
     font-size: 16px;
     line-height: 1.2;
-    color: $dark3Color;
+    color: $grayscale17Color;
 
     @media (max-width: 768px) {
       font-size: 14px;
@@ -272,7 +272,7 @@
     font-weight: 400;
     font-size: 20px;
     line-height: 1.2;
-    color: $dark3Color;
+    color: $grayscale17Color;
     white-space: nowrap;
 
     @media (max-width: 768px) {
@@ -299,7 +299,7 @@
     font-weight: 400;
     font-size: 16px;
     line-height: 1.2;
-    color: $dark3Color;
+    color: $grayscale17Color;
     text-align: center;
     text-transform: uppercase;
     white-space: nowrap;
@@ -309,7 +309,7 @@
     font-weight: 400;
     font-size: 16px;
     line-height: 1.2;
-    color: $dark2Color;
+    color: $grayscale6Color;
 
     @media (max-width: 768px) {
       font-size: 12px;

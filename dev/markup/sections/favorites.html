@@ -1,0 +1,31 @@
+<section class="section">
+  <div class="container">
+    <div class="section-content">
+      <div class="section-head">
+        <div class="page-header">
+          <h1 class="page-header-title">Избранное</h1>
+        </div>
+      </div>
+      <div class="section-body">
+        <div class="state">
+          <p class="state-text">Сохранено 3 товаров</p>
+          <button class="state-reset">
+            <svg class="state-reset-icon">
+              <use xlink:href="./assets/icons/symbol/sprite.svg#cross"></use>
+            </svg>
+            Очистить избранное
+          </button>
+        </div>
+        <div class="products">
+          @@for (var i = 0; i < 3; i++) {
+            <div class="products-item">
+              @@include('./catalog/product.html', {
+                removeButton: '<button class="product-remove"><svg class="product-remove-icon"><use xlink:href="./assets/icons/symbol/sprite.svg#cross"></use></svg>Удалить</button>'
+                })
+            </div>
+          }
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

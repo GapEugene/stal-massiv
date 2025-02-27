@@ -1,0 +1,336 @@
+.product-card {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 96px;
+
+  @media (max-width: 1440px) {
+    gap: 48px;
+  }
+
+  @media (max-width: 990px) {
+    gap: 16px;
+  }
+
+  &-side {
+    width: calc(100% - 880px);
+
+    @media (max-width: 1440px) {
+      width: calc(100% - 832px);
+    }
+
+    @media (max-width: 1280px) {
+      width: 416px;
+    }
+
+    @media (max-width: 990px) {
+      width: 100%;
+    }
+
+    .product-card-button {
+      margin-inline: auto;
+
+      @media (max-width: 1440px) {
+        width: 100%;
+        min-width: initial;
+      }
+
+      @media (max-width: 990px) {
+        width: fit-content;
+        min-width: calc(50% - 4px);
+        margin: 0;
+      }
+
+      @media (max-width: 600px) {
+        min-width: 100%;
+      }
+    }
+  }
+
+  &-media {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+
+    &:not(:last-child) {
+      margin-bottom: 48px;
+
+      @media (max-width: 1440px) {
+        margin-bottom: 24px;
+      }
+
+      @media (max-width: 990px) {
+        margin-bottom: 16px;
+      }
+    }
+
+    &-item {
+      width: calc(50% - 4px);
+
+      @media (max-width: 1440px) {
+        width: 100%;
+      }
+      
+      @media (max-width: 990px) {
+        width: calc(50% - 4px);
+      }
+
+      &:nth-child(n+3) {
+        @media (max-width: 1440px) {
+          display: none;
+        }
+      }
+    }
+
+    &-image {
+      width: 100%;
+      height: auto;
+      aspect-ratio: 37 / 53;
+    }
+  }
+
+  &-main {
+    width: 784px;
+    
+    @media (max-width: 1280px) {
+      width: calc(100% - 464px);
+    }
+
+    @media (max-width: 990px) {
+      width: 100%;
+    }
+  }
+
+  &-item {
+    &:not(:last-child) {
+      margin-bottom: 24px;
+
+      @media (max-width: 990px) {
+        margin-bottom: 16px;
+      }
+    }
+
+    &-mobile-hidden {
+      @media (max-width: 990px) {
+        display: none;
+      }
+    }
+
+    &-mobile-visible {
+      display: none;
+
+      @media (max-width: 990px) {
+        display: block;
+      }
+    }
+
+    &:has(.button-media) {
+      position: relative;
+      padding-right: 48px;
+
+      @media (max-width: 990px) {
+        padding-right: 40px;
+      }
+
+      .button-media {
+        position: absolute;
+        top: 4px;
+        right: 0;
+
+        @media (max-width: 990px) {
+          top: 0;
+        }
+      }
+    }
+  }
+
+  &-title {
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 1.2;
+    color: $grayscale0Color;
+
+    @media (max-width: 990px) {
+      font-size: 20px;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 24px;
+      
+      @media (max-width: 990px) {
+        margin-bottom: 8px;
+      }
+    }
+  }
+
+  &-article {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 1.2;
+    color: $grayscale0Color;
+
+    @media (max-width: 990px) {
+      font-size: 14px;
+    }
+  }
+
+  &-subtitle {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.2;
+    color: $grayscale17Color;
+
+    @media (max-width: 990px) {
+      font-size: 12px;
+      text-transform: uppercase;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 16px;
+
+      @media (max-width: 990px) {
+        margin-bottom: 8px;
+      }
+    }
+  }
+
+  &-price {
+    display: flex;
+    align-items: center;
+    column-gap: 24px;
+    margin-top: auto;
+
+    @media (max-width: 990px) {
+      column-gap: 16px;
+    }
+
+    @media (max-width: 768px) {
+      column-gap: 8px;
+    }
+
+    @media (max-width: 480px) {
+      column-gap: 4px;
+    }
+
+    &-current {
+      font-weight: 700;
+      font-size: 32px;
+      line-height: 1.2;
+      color: $grayscale17Color;
+
+      @media (max-width: 990px) {
+        font-size: 24px;
+      }
+    }
+
+    &-old {
+      font-weight: 700;
+      font-size: 20px;
+      line-height: 1.2;
+      color: $grayscale17Color02;
+      text-decoration: line-through;
+
+      @media (max-width: 990px) {
+        font-size: 16px;
+      }
+    }
+  }
+
+  &-controls {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+
+    @media (max-width: 1280px) {
+      flex-direction: column-reverse;
+      align-items: flex-start;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 48px;
+
+      @media (max-width: 990px) {
+        margin-bottom: 24px;
+      }
+    }
+  }
+
+  &-controls-extra {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+
+    @media (max-width: 990px) {
+      gap: 16px;
+    }
+
+    .button-primary-outline {
+      min-width: 280px;
+      min-height: 48px;
+      padding: 8px 12px;
+      font-size: 24px;
+
+      @media (max-width: 990px) {
+        min-width: initial;
+        min-height: 36px;
+        font-size: 14px;
+      }
+    }
+  }
+
+  &-button {
+    display: block;
+    width: min-content;
+    min-width: 400px;
+    padding: 22px;
+    background-color: $primaryColor;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1.2;
+    color: $grayscale17Color;
+    text-transform: uppercase;
+    text-align: center;
+    white-space: nowrap;
+    cursor: pointer;
+
+    @media (max-width: 990px) {
+      min-width: calc(50% - 4px);
+    }
+    
+    @media (max-width: 600px) {
+      min-width: 100%;
+    }
+  }
+
+  &-files {
+    padding: 16px;
+    background-color: $grayscale100Color;
+
+    &-item {
+      &:not(:last-child) {
+        margin-bottom: 16px;
+      }
+    }
+
+    &-link {
+      display: flex;
+      align-items: center;
+      column-gap: 4px;
+      font-weight: 700;
+      font-size: 20px;
+      line-height: 1.2;
+      color: $primaryColor;
+      text-decoration: underline;
+
+      @media (max-width: 990px) {
+        font-size: 12px;
+      }
+    }
+
+    &-icon {
+      width: 18px;
+      height: 18px;
+      fill: $primaryColor;
+    }
+  }
+}

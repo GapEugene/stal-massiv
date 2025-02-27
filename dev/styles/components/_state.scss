@@ -1,0 +1,44 @@
+.state {
+  &:not(:last-child) {
+    margin-bottom: 24px;
+  }
+
+  &-text {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 1.2;
+    color: $grayscale6Color;
+
+    @media (max-width: 990px) {
+      font-size: 14px;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 24px;
+
+      @media (max-width: 990px) {
+        margin-bottom: 8px;
+      }
+    }
+  }
+
+  &-reset {
+    display: flex;
+    align-items: center;
+    column-gap: 4px;
+    width: fit-content;
+    padding: 8px;
+    border: 1px solid $grayscale85Color;
+    border-radius: 5px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.2;
+    color: $grayscale49Color;
+
+    &-icon {
+      width: 16px;
+      height: 16px;
+      fill: $grayscale49Color;
+    }
+  }
+}

@@ -1,14 +1,30 @@
 .catalog-header {
   padding-bottom: 16px;
-  border-bottom: 1px solid $light3Color;
+  border-bottom: 1px solid $grayscale85Color;
+
+  @media (max-width: 768px) {
+    padding-bottom: 8px;
+  }
 
   &:not(:last-child) {
     margin-bottom: 24px;
+
+    @media (max-width: 768px) {
+      margin-bottom: 16px;
+    }
   }
 
   &-block {
     &:not(:last-child) {
       margin-bottom: 48px;
+
+      @media (max-width: 1440px) {
+        margin-bottom: 24px;
+      }
+
+      @media (max-width: 768px) {
+        margin-bottom: 16px;
+      }
     }
   }
   
@@ -16,12 +32,28 @@
     font-weight: 400;
     font-size: 64px;
     line-height: 1.2;
-    color: $dark2Color;
+    color: $grayscale6Color;
     text-align: center;
     text-transform: uppercase;
 
+    @media (max-width: 1440px) {
+      font-size: 48px;
+    }
+
+    @media (max-width: 768px) {
+      font-size: 24px;
+    }
+
     &:not(:last-child) {
-      margin-bottom: 20px;
+      margin-bottom: 24px;
+
+      @media (max-width: 1440px) {
+        margin-bottom: 16px;
+      }
+
+      @media (max-width: 768px) {
+        margin-bottom: 8px;
+      }
     }
   }
 
@@ -29,8 +61,12 @@
     font-weight: 400;
     font-size: 20px;
     line-height: 1.2;
-    color: $dark2Color;
+    color: $grayscale6Color;
     text-align: center;
+
+    @media (max-width: 768px) {
+      font-size: 12px;
+    }
   }
 
   &-controls {
@@ -39,5 +75,15 @@
     align-items: center;
     justify-content: center;
     gap: 20px;
+
+    @media (max-width: 768px) {
+      gap: 8px 16px;
+    }
+
+    & > * {
+      @media (max-width: 768px) {
+        flex: 1;
+      }
+    }
   }
 }

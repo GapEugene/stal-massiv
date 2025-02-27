@@ -4,14 +4,23 @@
 @import './common/base';
 
 @import './components/wrapper';
+@import './components/section';
 @import './components/container';
 @import './components/breadcrumbs';
 @import './components/catalog-header';
 @import './components/pagination';
+@import './components/select';
+@import './components/accordion';
+@import './components/page-header';
+@import './components/wysiwyg';
+@import './components/state';
 
 @import './components/header/index';
 @import './components/footer/index';
 @import './components/button/index';
+@import './components/filter/index';
 @import './components/products/index';
+@import './components/product-card/index';
+@import './components/blocks/index';
 
 @import './common/extra';

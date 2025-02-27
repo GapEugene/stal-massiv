@@ -3,15 +3,19 @@
 }
 
 body {
-  background-color: $light2Color;
+  background-color: $grayscale95Color;
   font-family: $primaryFont;
 }
 
-input {
+button, input {
   font-family: $primaryFont;
 }
 
 img, svg {
   display: block;
   max-width: 100%;
+}
+
+table {
+  border-collapse: collapse;
 }

@@ -1,0 +1,21 @@
+.button-filter {
+  display: flex;
+  align-items: center;
+  column-gap: 16px;
+  min-height: 58px;
+  padding: 12px 24px;
+  border: 1px solid $primaryColor;
+  border-radius: 33px;
+  background-color: $primaryColor;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.2;
+  color: $grayscale6Color;
+  cursor: pointer;
+
+  &-icon {
+    width: 32px;
+    height: 32px;
+    fill: $grayscale6Color;
+  }
+}

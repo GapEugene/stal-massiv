@@ -1,0 +1,17 @@
+.button-primary-outline {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  min-width: 145px;
+  min-height: 58px;
+  padding: 18px 12px;
+  border: 1px solid $primaryColor;
+  border-radius: 33px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.2;
+  color: $grayscale6Color;
+  text-align: center;
+  cursor: pointer;
+}

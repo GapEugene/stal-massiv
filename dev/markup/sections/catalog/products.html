@@ -1,0 +1,40 @@
+<section class="section">
+  <div class="container">
+    <div class="section-content">
+      <div class="section-body">
+        <div class="products">
+          @@for (var i = 0; i < 10; i++) {
+            <div class="products-item">
+              @@include('./product.html')
+            </div>
+          }
+          <div class="products-promo">
+            <img class="products-promo-image" src="./assets/images/products/promo-1.jpg" alt="">
+            <p class="products-promo-title">Акционное предложение</p>
+            <a class="products-promo-button" href="#">
+              Подробнее
+              <svg class="products-promo-button-icon">
+                <use xlink:href="./assets/icons/symbol/sprite.svg#arrow-right-long"></use>
+              </svg>
+            </a>
+          </div>
+          <div class="products-promo products-promo-alt">
+            <img class="products-promo-image" src="./assets/images/products/promo-2.jpg" alt="">
+            <p class="products-promo-title">Акционное предложение</p>
+            <a class="products-promo-button" href="#">
+              Подробнее
+              <svg class="products-promo-button-icon">
+                <use xlink:href="./assets/icons/symbol/sprite.svg#arrow-right-long"></use>
+              </svg>
+            </a>
+          </div>
+          @@for (var i = 0; i < 4; i++) {
+            <div class="products-item">
+              @@include('./product.html')
+            </div>
+          }
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

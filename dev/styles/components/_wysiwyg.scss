@@ -1,0 +1,54 @@
+.wysiwyg {
+  & > * {
+    &:not(:last-child) {
+      margin-bottom: 24px;
+
+      @media (max-width: 990px) {
+        margin-bottom: 16px;
+      }
+    }
+  }
+
+  table {
+    width: 100%;
+    border: 1px solid $grayscale73Color;
+
+    th {
+      padding: 16px 20px;
+      border: 1px solid $grayscale73Color;
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 1.2;
+      color: $grayscale20Color;
+      text-align: left;
+
+      @media (max-width: 990px) {
+        font-size: 14px;
+      }
+    }
+
+    td {
+      padding: 16px 20px;
+      border: 1px solid $grayscale73Color;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 1.2;
+      color: $grayscale20Color;
+
+      @media (max-width: 990px) {
+        font-size: 14px;
+      }
+    }
+  }
+
+  p {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 1.2;
+    color: $grayscale20Color;
+
+    @media (max-width: 990px) {
+      font-size: 12px;
+    }
+  }
+}

@@ -1,0 +1,27 @@
+.section {
+  &:not(:last-child) {
+    margin-bottom: 96px;
+
+    @media (max-width: 768px) {
+      margin-bottom: 48px;
+    }
+  }
+  
+  &-content {
+
+  }
+
+  &-head {
+    &:not(:last-child) {
+      margin-bottom: 24px;
+
+      @media (max-width: 990px) {
+        margin-bottom: 16px;
+      }
+    }
+  }
+
+  &-body {
+
+  }
+}

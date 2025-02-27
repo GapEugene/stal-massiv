@@ -2,13 +2,18 @@
   display: block;
   width: min-content;
   padding: 16px 24px;
-  border: 1px solid $lightColor;
-  background-color: $lightColor;
+  border: 1px solid $grayscale100Color;
+  background-color: $grayscale100Color;
   border-radius: 10px;
   font-weight: 400;
   font-size: 20px;
   line-height: 1.2;
-  color: $dark2Color;
+  color: $grayscale6Color;
   text-align: center;
   white-space: nowrap;
+
+  @media (max-width: 768px) {
+    padding: 8px;
+    font-size: 14px;
+  }
 }

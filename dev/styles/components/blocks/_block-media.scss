@@ -1,0 +1,58 @@
+.block-media {
+  &-title {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.2;
+    color: $grayscale17Color;
+
+    &:not(:last-child) {
+      margin-bottom: 16px;
+
+      @media (max-width: 768px) {
+        margin-bottom: 8px;
+      }
+    }
+  }
+
+  &-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+
+    @media (max-width: 768px) {
+      gap: 8px;
+    }
+
+    &-center {
+      justify-content: center;
+    }
+  }
+
+  &-item {
+    
+  }
+
+  &-link {
+    display: block;
+  }
+
+  &-icon {
+    width: 32px;
+    height: 32px;
+    box-shadow: 0 0 4px 0 $grayscale0Color025;
+    border-radius: 8px;
+
+    &-circle {
+      border-radius: 50%;
+    }
+  }
+
+  &-image {
+    width: auto;
+    height: 40px;
+
+    @media (max-width: 768px) {
+      height: 20px;
+    }
+  }
+}

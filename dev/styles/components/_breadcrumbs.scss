@@ -1,6 +1,10 @@
 .breadcrumbs {
   &:not(:last-child) {
-    margin-bottom: 20px;
+    margin-bottom: 24px;
+
+    @media (max-width: 990px) {
+      margin-bottom: 16px;
+    }
   }
 
   &-content {
@@ -26,7 +30,7 @@
           font-weight: 500;
           font-size: 16px;
           line-height: 1.2;
-          color: $dark2Color;
+          color: $grayscale6Color;
           text-align: center;
         }
       }
@@ -36,7 +40,7 @@
       font-weight: 500;
       font-size: 16px;
       line-height: 1.2;
-      color: $dark2Color;
+      color: $grayscale6Color;
       white-space: nowrap;
     }
 
@@ -44,14 +48,14 @@
       font-weight: 500;
       font-size: 16px;
       line-height: 1.2;
-      color: $dark2Color;
+      color: $grayscale6Color;
       white-space: nowrap;
     }
 
     &-icon {
       width: 20px;
       height: 20px;
-      fill: $dark2Color;
+      fill: $grayscale6Color;
     }
   }
 }

@@ -1,0 +1,18 @@
+.filter-panel {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+
+  &-item {
+    &-end {
+      margin-left: auto;
+    }
+  }
+
+  &-text {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.2;
+    color: $grayscale56Color;
+  }
+}

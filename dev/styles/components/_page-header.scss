@@ -1,0 +1,43 @@
+.page-header {
+  &-title {
+    position: relative;
+    padding-bottom: 16px;
+    font-weight: 400;
+    font-size: 64px;
+    line-height: 1.2;
+    color: $grayscale6Color;
+    text-transform: uppercase;
+
+    @media (max-width: 1440px) {
+      padding-bottom: 8px;
+      font-size: 48px;
+    }
+
+    @media (max-width: 990px) {
+      font-size: 32px;
+    }
+
+    @media (max-width: 600px) {
+      padding-bottom: 4px;
+      font-size: 24px;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 360px;
+      height: 3px;
+      background-color: $primaryColor;
+
+      @media (max-width: 1440px) {
+        width: 270px;
+      }
+
+      @media (max-width: 990px) {
+        width: 180px;
+      }
+    }
+  }
+}
