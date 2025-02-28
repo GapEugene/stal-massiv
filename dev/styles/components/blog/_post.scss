@@ -1,0 +1,44 @@
+.post {
+  &-cover {
+    &:not(:last-child) {
+      margin-bottom: 16px;
+    }
+
+    &-image {
+      border-radius: 10px 10px 0 0;
+    }
+  }
+
+  &-meta {
+    &:not(:last-child) {
+      margin-bottom: 24px;
+
+      @media (max-width: 990px) {
+        margin-bottom: 16px;
+      }
+    }
+  }
+
+  &-content {
+
+  }
+
+  &-title {
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 1.2;
+    color: $grayscale6Color;
+
+    @media (max-width: 990px) {
+      font-size: 20px;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 24px;
+
+      @media (max-width: 990px) {
+        margin-bottom: 16px;
+      }
+    }
+  }
+}

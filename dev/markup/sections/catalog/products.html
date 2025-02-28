@@ -5,7 +5,7 @@
         <div class="products">
           @@for (var i = 0; i < 10; i++) {
             <div class="products-item">
-              @@include('./product.html')
+              @@include('./product.html', { removeButton: '' })
             </div>
           }
           <div class="products-promo">
@@ -30,7 +30,7 @@
           </div>
           @@for (var i = 0; i < 4; i++) {
             <div class="products-item">
-              @@include('./product.html')
+              @@include('./product.html', { removeButton: '' })
             </div>
           }
         </div>

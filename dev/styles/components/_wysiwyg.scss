@@ -41,7 +41,7 @@
     }
   }
 
-  p {
+  p, li {
     font-weight: 400;
     font-size: 20px;
     line-height: 1.2;
@@ -49,6 +49,36 @@
 
     @media (max-width: 990px) {
       font-size: 12px;
+    }
+  }
+
+  li {
+    position: relative;
+    padding-left: 16px;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 9px;
+      left: 0;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background-color: $grayscale20Color;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 8px;
+    }
+
+    ul, ol {
+      margin-top: 8px;
+    }
+  }
+
+  ul {
+    li {
+
     }
   }
 }

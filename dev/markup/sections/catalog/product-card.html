@@ -268,12 +268,12 @@
 <section class="products-slider">
   <div class="container">
     <div class="products-slider-content">
-      <h2 class="products-slider-title">Недавно смотрели</h2>
+      <h2 class="heading">Недавно смотрели</h2>
       <div class="swiper">
         <div class="swiper-wrapper">
           @@for (var i = 0; i < 5; i++) {
             <div class="swiper-slide">
-              @@include('./catalog/product.html')
+              @@include('./product.html', { removeButton: '' })
             </div>
           }
         </div>

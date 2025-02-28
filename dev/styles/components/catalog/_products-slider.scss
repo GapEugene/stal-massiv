@@ -11,27 +11,7 @@
   }
 
   &-title {
-    font-weight: 700;
-    font-size: 40px;
-    line-height: 1.2;
-    color: $grayscale17Color;
-    text-transform: uppercase;
-
-    @media (max-width: 1440px) {
-      font-size: 30px;
-    }
-
-    @media (max-width: 768px) {
-      font-size: 20px;
-    }
-
-    &:not(:last-child) {
-      margin-bottom: 48px;
-
-      @media (max-width: 768px) {
-        margin-bottom: 16px;
-      }
-    }
+    
   }
 
   .swiper {
