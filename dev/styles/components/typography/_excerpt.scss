@@ -1,0 +1,22 @@
+.excerpt {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.2;
+  color: $grayscale0Color;
+  overflow: hidden;
+
+  @media (max-width: 990px) {
+    font-size: 12px;
+  }
+
+  &:not(:last-child) {
+    margin-bottom: 16px;
+
+    @media (max-width: 990px) {
+      margin-bottom: 8px;
+    }
+  }
+}

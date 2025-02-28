@@ -2,7 +2,6 @@
 @import './common/variables';
 @import './common/reset';
 @import './common/base';
-@import './common/typography';
 
 @import './components/wrapper';
 @import './components/section';
@@ -21,5 +20,6 @@
 @import './components/blocks/index';
 @import './components/catalog/index';
 @import './components/blog/index';
+@import './components/typography/index';
 
 @import './common/extra';

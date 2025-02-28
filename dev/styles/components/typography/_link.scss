@@ -1,0 +1,35 @@
+.link {
+  display: flex;
+  align-items: center;
+  width: fit-content;
+  column-gap: 16px;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 1.2;
+  color: $grayscale0Color;
+  white-space: nowrap;
+  text-decoration: underline;
+
+  @media (max-width: 1440px) {
+    font-size: 18px;
+  }
+
+  @media (max-width: 1280px) {
+    font-size: 16px;
+  }
+
+  @media (max-width: 990px) {
+    font-size: 14px;
+  }
+
+  &-icon {
+    width: 70px;
+    height: 16px;
+    fill: $grayscale0Color;
+
+    @media (max-width: 990px) {
+      width: 42px;
+      height: 8px;
+    }
+  }
+}

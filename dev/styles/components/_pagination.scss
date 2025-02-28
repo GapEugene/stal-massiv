@@ -2,8 +2,12 @@
   &:not(:last-child) {
     margin-bottom: 96px;
 
-    @media (max-width: 768px) {
+    @media (max-width: 990px) {
       margin-bottom: 48px;
+    }
+
+    @media (max-width: 600px) {
+      margin-bottom: 24px;
     }
   }
 

@@ -1,0 +1,33 @@
+<section class="section">
+  <div class="container">
+    <div class="section-content">
+      <div class="section-head">
+        <div class="page-header">
+          <h1 class="page-header-title">Блог</h1>
+        </div>
+      </div>
+      <div class="section-body">
+        <div class="blog">
+          @@for (var i = 0; i < 5; i++) {
+            <div class="blog-item">
+              <div class="blog-side">
+                <img class="blog-cover" src="./assets/images/blog/posts-cover.jpg" alt="">
+              </div>
+              <div class="blog-main">
+                <p class="date">Nov 22 , 2021 5m read time</p>
+                <p class="caption">Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit </p>
+                <p class="excerpt">Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis, lectus magna fringilla urna, porttitor rhoncus dolor purus non enim praesent elementum facilisis leo, vel fringilla est ullamcorper eget nulla facilisi etiam dignissim diam quis enim lobortis</p>
+                <a class="link" href="#">
+                  Подробнее
+                  <svg class="link-icon">
+                    <use xlink:href="./assets/icons/symbol/sprite.svg#arrow-right-long"></use>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          }
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
